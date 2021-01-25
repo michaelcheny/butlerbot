@@ -51,29 +51,26 @@ const fetchPlayerStats = async (id) => {
 };
 
 // builds the message for the requested player
-const buildPlayer = async (playerJson) => {
-  let stats = await fetchPlayerStats(playerJson.id);
-  console.log(stats);
+const buildPlayer = async (player) => {
+  let stats = await fetchPlayerStats(player.id);
   if (stats === undefined) return "This player doesn't have stats for this season.";
 
   return new MessageEmbed()
-    .setColor('#234134')
-    .setTitle(`Stats for ${playerJson.first_name + ' ' + playerJson.last_name}`)
+    .setColor('#248A00')
+    .setTitle(`Stats for ${player.first_name + ' ' + player.last_name}`)
     .setDescription(
       `
-  Height: ${playerJson.height_feet + "'" + playerJson.height_inches + '"'}, Weight: ${
-        playerJson.weight_pounds
-      }
-    Games Played: ${stats.games_played}, Avg Mins: ${stats.min}
-    FG%: ${stats.fg_pct}, FG3%: ${stats.fg3_pct}, FT%: ${stats.ft_pct}
-    Points: ${stats.pts}
-    Rebound: ${stats.reb}
-    Assist: ${stats.ast}
-    Steals: ${stats.stl}
-    Blocks: ${stats.blk}
-    Turnovers: ${stats.turnover}
+  Height: *${player.height_feet + "'" + player.height_inches + '"'}*, Weight: *${
+        player.weight_pounds
+      }*
+    Games Played: *${stats.games_played}*, Avg Mins: *${stats.min}*
+    FG%: *${stats.fg_pct}*, FG3%: *${stats.fg3_pct}*, FT%: *${stats.ft_pct}*
+    Points: *${stats.pts}*
+    Rebound: *${stats.reb}*
+    Assist: *${stats.ast}*
+    Steals: *${stats.stl}*
+    Blocks: *${stats.blk}*
+    Turnovers: *${stats.turnover}*
   `
     );
-  // .addField('\u200b', '\u200b');
-  // .addField('Inline field title', 'Some value here', true);
 };
