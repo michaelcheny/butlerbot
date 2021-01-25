@@ -1,0 +1,25 @@
+{
+  "name": "butlerbot",
+  "version": "1.0.0",
+  "description": "Your personal handy dandy discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelcheny/butlerbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelcheny/butlerbot/issues"
+  },
+  "homepage": "https://github.com/michaelcheny/butlerbot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "discord.js-commando": "github:discordjs/Commando"
+  }
+}
