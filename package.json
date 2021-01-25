@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/michaelcheny/butlerbot#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "discord.js": "^12.5.1",
     "discord.js-commando": "github:discordjs/Commando"
   }
