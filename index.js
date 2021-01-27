@@ -20,7 +20,7 @@ client.registry
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}! (ID: ${client.user.id})`);
-  client.user.setActivity('with Commando');
+  client.user.setActivity('nothing cause im just a bot', { type: 'WATCHING' });
 });
 
 client.on('error', console.error);

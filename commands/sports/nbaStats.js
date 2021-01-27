@@ -46,7 +46,6 @@ const fetchPlayerStats = async (id) => {
     return data[0];
   } catch (error) {
     console.log(error.message);
-    return error.message;
   }
 };
 
